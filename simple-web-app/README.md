@@ -28,3 +28,27 @@ Example of post request:
 	    {"firstname": "Nick", "lastname":"Mason"}
 	 ]
 }
+
+Actuator endpoints:
+
+http://localhost:8082/simple-web-app/actuator/info
+
+http://localhost:8082/simple-web-app/actuator/health
+
+http://localhost:8082/simple-web-app/actuator/metrics
+
+http://localhost:8082/simple-web-app/actuator/beans
+
+http://localhost:8082/simple-web-app/actuator/scheduledtasks
+
+http://localhost:8082/simple-web-app/actuator/threaddump
+
+http://localhost:8082/simple-web-app/actuator/loggers
+
+http://localhost:8082/simple-web-app/actuator/env
+
+http://localhost:8082/simple-web-app/actuator/configprops
+
+http://localhost:8082/simple-web-app/actuator/conditions
+
+http://localhost:8082/simple-web-app/actuator/caches
