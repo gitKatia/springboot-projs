@@ -8,5 +8,6 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>simple-web-app</module>
+		<module>scheduler</module>
 	</modules>
 </project>
