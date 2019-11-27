@@ -9,5 +9,6 @@
 	<modules>
 		<module>simple-web-app</module>
 		<module>scheduler</module>
+		<module>jms-messaging</module>
 	</modules>
 </project>
