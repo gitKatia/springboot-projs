@@ -1,6 +1,7 @@
 package com.kat.springboot;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +21,9 @@ public class SimpleAppApplication {
 		Arrays.sort(beanDefinitionNames);
 		logger.info("Number of  beans defined: {}", beanDefinitionCount);
 		Arrays.asList(beanDefinitionNames).forEach( beanDefinitionName -> logger.info("Bean name: {}", beanDefinitionName));
-		
+		Calculator calculator = context.getBean(Calculator.class);
+		List<Integer> results = calculator.calculate(3, 2);
+		logger.info("Results {}", results);
 	}
 
 }
