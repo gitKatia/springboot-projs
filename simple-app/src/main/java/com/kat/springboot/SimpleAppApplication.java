@@ -5,9 +5,11 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SimpleAppApplication {
@@ -21,9 +23,14 @@ public class SimpleAppApplication {
 		Arrays.sort(beanDefinitionNames);
 		logger.info("Number of  beans defined: {}", beanDefinitionCount);
 		Arrays.asList(beanDefinitionNames).forEach( beanDefinitionName -> logger.info("Bean name: {}", beanDefinitionName));
-		Calculator calculator = context.getBean(Calculator.class);
-		List<Integer> results = calculator.calculate(3, 2);
-		logger.info("Results {}", results);
+	}
+	
+	@Bean
+	public ApplicationRunner applicationRunner(Calculator calculator) {
+		return args -> {
+			List<Integer> results = calculator.calculate(3, 2);
+			logger.info("Results {}", results);
+		};
 	}
 
 }
