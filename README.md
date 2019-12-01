@@ -4,6 +4,7 @@ Container of modules:
 
 * simple-web-app
 * scheduler
-* jms.messaging
+* jms-messaging
+* simple-app
 
 Each module is a Spring Boot Application
